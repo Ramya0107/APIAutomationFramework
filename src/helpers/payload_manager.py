@@ -13,3 +13,18 @@ def payload_create_booking():
         "additionalneeds": "Breakfast"
     }
     return payload
+
+
+def payload_updateAllData_booking():
+    payload = {
+        "firstname": "Ramya",
+        "lastname": "Uva",
+        "totalprice": 200,
+        "depositpaid": "False",
+        "bookingdates": {
+            "checkin": "2020-01-01",
+            "checkout": "2023-01-01"
+        },
+        "additionalneeds": "Breakfast,Lunch"
+    }
+    return payload
