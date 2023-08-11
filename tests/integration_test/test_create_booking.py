@@ -7,13 +7,15 @@ TC#3 - Verify the JSON schema is valid
 '''
 # test_create_booking_tc1 -> base url, create booking url, post request, payload
 
+# import pytest
 
-# from src.constants.apiconstants import url_create_booking
-import pytest
+import sys
+
+sys.path.append('/PyAPIAutomationFramework/src/')
 
 from src.constants.apiconstants import url_create_booking
 from src.helpers.api_wrapper import post_request
-from src.helpers.common_verification import verify_http_status_code, verify_key
+from src.helpers.common_verification import verify_key, verify_http_status_code
 from src.helpers.payload_manager import payload_create_booking
 from src.helpers.utils import common_headers
 
@@ -28,7 +30,6 @@ class TestIntegration(object):
         verify_http_status_code(response, 200)
         booking_id = response.json()["bookingid"]
         verify_key(booking_id)
-
 
     # def test_create_booking_tc2(self):
     #     assert True == True

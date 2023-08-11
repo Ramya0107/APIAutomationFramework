@@ -4,7 +4,7 @@ import json
 
 def get_payload_auth():
     # Read from the auth.json and return json
-    file_data = open("src/resources/auth.json")
+    file_data = open("src1/resources/auth.json")
     data = json.loads(str(file_data))
     file_data.close()
     return data

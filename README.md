@@ -25,6 +25,22 @@ URL - https://restful-booker.herokuapp.com/apidoc/index.html
 ### How to run locally and generate simple report
 `pytest -s -v --html=report.html`
 
+#### If module error, use below cmd to execute the script
+`python -m pytest -s -v`
+
+### How to run parallel test
+- Step1: pip install pytest-xdist
+- Step2: use below cmd to execute the script in parallel. 
+- Path - tests/integration_test/parallel_test
+- -n auto - runs the tests by using separate workers for each function. This is faster, since it distribute tests across multiple CPU's to speed up test execution. 
+`pytest -n auto tests/integration_test/parallel_test -s -v`
+- -n 2 - takes up 2 random function 1st and execute then takes up another 2 random functions
+`pytest -n 2 tests/integration_test/parallel_test -s -v`
+
+#### If module error, use below cmd to execute the script
+`python -m pytest -n auto tests/integration_test/ -s -v --html=report.html`
+
+
 ### How to Run via Jenkins?
 
 
