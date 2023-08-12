@@ -9,8 +9,8 @@ from src.helpers.utils import common_headers, headers_withToken, common_auth
 
 class TestIntegration(object):
 
-    @pytest.fixture
     def test_create_token(self):
+        global token
         response = post_request(url_create_token(), headers=common_headers(), auth=None, payload=common_auth(),
                                 in_json=False)
         verify_http_status_code(response, 200)
@@ -18,8 +18,8 @@ class TestIntegration(object):
         verify_token(token)
         return token
 
-    @pytest.fixture
     def test_create_booking(self):
+        global booking_id
         # call the functions to make request
         # you will not see how we are making a request in the test case
         response = post_request(url_create_booking(), headers=common_headers(), auth=None,
@@ -30,14 +30,14 @@ class TestIntegration(object):
         verify_key(booking_id)
         return booking_id
 
-    def test_update_booking(self, test_create_token, test_create_booking):
-        response = put_request(url_update_booking(test_create_booking),
-                               headers=headers_withToken(test_create_token), auth=None,
+    def test_update_booking(self):
+        response = put_request(url_update_booking(booking_id),
+                               headers=headers_withToken(token), auth=None,
                                payload=payload_updateAllData_booking(), in_json=False)
         verify_http_status_code(response, 200)
         print(response.text)
 
-    def test_delete_booking(self, test_create_token, test_create_booking):
-        response = delete_request(url_delete_booking(test_create_booking),
-                                  headers=headers_withToken(test_create_token), auth=None, in_json=False)
+    def test_delete_booking(self):
+        response = delete_request(url_delete_booking(booking_id),
+                                  headers=headers_withToken(token), auth=None, in_json=False)
         verify_http_status_code(response, 201)

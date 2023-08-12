@@ -18,7 +18,7 @@ URL - https://restful-booker.herokuapp.com/apidoc/index.html
 
 #### P.S - DB Connection possible(in future)
 
-### Intsall pip Packages
+### Install pip Packages
 - `pip install requests pytest pytest-html faker allure-pytest jsonschema`
 - `pip install requirement.txt`
 
