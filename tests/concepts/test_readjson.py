@@ -1,14 +1,16 @@
-import requests
-import os
-from dotenv import load_dotenv
 import json
+import os
+
 import pytest
+from dotenv import load_dotenv
+
+load_dotenv()
 
 
 @pytest.fixture()
 def load_json_data():
-    load_dotenv()
-    file_name = os.getenv("load_env")
+    print("Current working directory:", os.getcwd())
+    file_name = os.path.join(os.getcwd(), os.getenv("load_env"))
     print(file_name)
     with open(file_name, 'r') as f:
         data = json.load(f)
