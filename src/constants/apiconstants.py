@@ -17,11 +17,12 @@ def url_create_booking():
 
 
 def url_update_booking(booking_id):
-    return "https://restful-booker.herokuapp.com/booking/"+ str(booking_id)
+    return "https://restful-booker.herokuapp.com/booking/" + str(booking_id)
 
 
 def url_delete_booking(booking_id):
     return "https://restful-booker.herokuapp.com/booking/" + str(booking_id)
 
 
-
+def url_get_booking(booking_id):
+    return "https://restful-booker.herokuapp.com/booking/" + str(booking_id)

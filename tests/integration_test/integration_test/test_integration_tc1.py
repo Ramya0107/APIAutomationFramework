@@ -10,7 +10,7 @@ from src.helpers.utils import common_headers, headers_withToken, common_auth
 
 class TestIntegration(object):
 
-    @pytest.mark.integration
+    @pytest.mark.july20_smoke
     @allure.feature("#TC1 creating a token")
     def test_create_token(self):
         global token
@@ -21,7 +21,7 @@ class TestIntegration(object):
         verify_token(token)
         return token
 
-    @pytest.mark.integration
+    @pytest.mark.july20_smoke
     @allure.feature("#TC2 creating a bookingID")
     def test_create_booking(self):
         global booking_id
@@ -35,7 +35,7 @@ class TestIntegration(object):
         verify_key(booking_id)
         return booking_id
 
-    @pytest.mark.integration
+    @pytest.mark.july20_smoke
     @allure.feature("#TC3 updating full data in created bookingID")
     def test_update_booking(self):
         response = put_request(url_update_booking(booking_id),
@@ -44,7 +44,7 @@ class TestIntegration(object):
         verify_http_status_code(response, 200)
         print(response.text)
 
-    @pytest.mark.integration
+    @pytest.mark.july20_smoke
     @allure.feature("#TC4 deleting the created bookingID")
     def test_delete_booking(self):
         response = delete_request(url_delete_booking(booking_id),

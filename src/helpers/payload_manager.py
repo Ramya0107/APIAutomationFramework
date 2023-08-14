@@ -28,3 +28,10 @@ def payload_updateAllData_booking():
         "additionalneeds": "Breakfast,Lunch"
     }
     return payload
+
+
+def payload_updateRequestName():
+    payload = {
+        "firstname": "Ramya",
+    }
+    return payload

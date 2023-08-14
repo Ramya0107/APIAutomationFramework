@@ -11,11 +11,9 @@ TC#3 - Verify the JSON schema is valid
 
 import sys
 
-sys.path.append('/PyAPIAutomationFramework/src/')
-
 from src.constants.apiconstants import url_create_booking
 from src.helpers.api_wrapper import post_request
-from src.helpers.common_verification import verify_key, verify_http_status_code
+from src.helpers.common_verification import verify_http_status_code, verify_key
 from src.helpers.payload_manager import payload_create_booking
 from src.helpers.utils import common_headers
 

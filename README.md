@@ -43,7 +43,7 @@ URL - https://restful-booker.herokuapp.com/apidoc/index.html
 ### How to generate allure report?
 - Step1: Install node.js in the system - this will install npm (node package manager)
 - Step2: `open cmd -> check node --version`, if available Install allure-commandline which is a package manager by using npm
-`npm i -g allure-commendline` which helps to generate a report.
+`npm i -g allure-commandline` which helps to generate a report.
 - Step3: pycharm terminal - `pip install allure-pytest`
 - Step4: Mark the test cases with annotations like 
   @allure.feature()

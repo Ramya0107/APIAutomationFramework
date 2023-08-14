@@ -3,8 +3,8 @@ import json
 import requests
 
 
-def get_request(url, auth, in_json):
-    get_response_data = requests.get(url=url, auth=auth)
+def get_request(url, headers, in_json):
+    get_response_data = requests.get(url=url, headers=headers)
     if in_json is True:
         return get_response_data.json()
     return get_response_data

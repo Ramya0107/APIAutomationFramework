@@ -14,3 +14,11 @@ def verify_token(token):
     assert token is not None, "Token is not empty:" + token
     # assert token > 0, "Key is greater than zero:" + token
     # TypeError: '>' not supported between instances of 'str' and 'int'
+
+
+def verify_bookingID(data, expected_data):
+    assert data == expected_data, "Created booking id updated:" + expected_data
+
+
+def verify_updated_firstname(data, expected_data):
+    assert data == expected_data, "Created booking id updated:" + expected_data
