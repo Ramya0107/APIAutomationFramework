@@ -9,6 +9,7 @@ from src.helpers.payload_manager import payload_create_booking, payload_updateRe
 from src.helpers.utils import common_headers, headers_withToken, common_auth
 
 booking_id = None
+token = None
 
 
 class TestIntegration(object):

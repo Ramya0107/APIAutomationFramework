@@ -7,6 +7,9 @@ from src.helpers.common_verification import verify_http_status_code, verify_toke
 from src.helpers.payload_manager import payload_create_booking, payload_updateAllData_booking
 from src.helpers.utils import common_headers, headers_withToken, common_auth
 
+booking_id = None
+token = None
+
 
 class TestIntegration(object):
 
