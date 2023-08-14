@@ -35,3 +35,15 @@ def payload_updateRequestName():
         "firstname": "Ramya",
     }
     return payload
+
+
+def payload_create_req_empty():
+    payload = {
+    }
+    return payload
+
+
+def payload_create_req_withoutvalues():
+    {
+
+    }

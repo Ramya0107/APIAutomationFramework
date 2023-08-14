@@ -9,8 +9,12 @@ load_dotenv()
 
 @pytest.fixture()
 def load_json_data():
-    print("Current working directory:", os.getcwd())
-    file_name = os.path.join(os.getcwd(), os.getenv("load_env"))
+    path = str(os.getcwdb())
+    filename = str(os.getenv("load_env"))
+    print("Current working directory:", os.getcwdb())
+    print("json file name: ", os.getenv("load_env"))
+    # "<json directory>" - give the directory where json file is available
+    file_name = "<json directory>" + filename
     print(file_name)
     with open(file_name, 'r') as f:
         data = json.load(f)

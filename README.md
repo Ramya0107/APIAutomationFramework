@@ -28,6 +28,10 @@ URL - https://restful-booker.herokuapp.com/apidoc/index.html
 #### If module error, use below cmd to execute the script
 `python -m pytest -s -v`
 
+### Concepts
+- dotenv file usage, readJSON
+`pip install python-dotenv`
+
 ### How to run parallel test
 - Step1: pip install pytest-xdist
 - Step2: use below cmd to execute the script in parallel. 
@@ -48,6 +52,12 @@ URL - https://restful-booker.herokuapp.com/apidoc/index.html
 - Step4: Mark the test cases with annotations like 
   @allure.feature()
   @allure.story()
+
+### How to run locally and generate allure report
+- sample cmd for allure report
+`python -m pytest tests/integration_test -s -v --alluredir=./reports`
+- To open the allure report
+`allure serve ./reports`
 
 
 ### How to Run via Jenkins?
