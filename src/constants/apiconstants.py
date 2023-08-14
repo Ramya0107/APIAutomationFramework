@@ -26,3 +26,7 @@ def url_delete_booking(booking_id):
 
 def url_get_booking(booking_id):
     return "https://restful-booker.herokuapp.com/booking/" + str(booking_id)
+
+
+def url_getAll_booking():
+    return "https://restful-booker.herokuapp.com/booking"

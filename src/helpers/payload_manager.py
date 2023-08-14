@@ -17,8 +17,8 @@ def payload_create_booking():
 
 def payload_updateAllData_booking():
     payload = {
-        "firstname": "Ramya",
-        "lastname": "Uva",
+        "firstname": "abcd",
+        "lastname": "abcd",
         "totalprice": 200,
         "depositpaid": "False",
         "bookingdates": {

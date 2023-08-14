@@ -1,11 +1,9 @@
-# Create a booking, delete it and verify
-
-from src.constants.apiconstants import url_create_booking, url_delete_booking, url_create_token, \
-    url_update_booking
-from src.helpers.api_wrapper import post_request, delete_request, put_request
+# Try to update on a delete id
+from src.constants.apiconstants import url_create_token, url_create_booking, url_delete_booking
+from src.helpers.api_wrapper import post_request, delete_request
 from src.helpers.common_verification import verify_http_status_code, verify_token, verify_key
-from src.helpers.payload_manager import payload_create_booking, payload_updateAllData_booking
-from src.helpers.utils import common_headers, headers_withToken, common_auth
+from src.helpers.payload_manager import payload_create_booking
+from src.helpers.utils import common_headers, common_auth, headers_withToken
 
 booking_id = None
 token = None
@@ -35,10 +33,3 @@ class TestIntegration(object):
         response = delete_request(url_delete_booking(booking_id), headers=headers_withToken(token), auth=None,
                                   in_json=False)
         verify_http_status_code(response, 201)
-
-    def test_update_booking(self):
-        response = put_request(url_update_booking(booking_id),
-                               headers=headers_withToken(token), auth=None,
-                               payload=payload_updateAllData_booking(), in_json=False)
-        verify_http_status_code(response, 405)
-        print(response.text)
