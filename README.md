@@ -60,6 +60,4 @@ URL - https://restful-booker.herokuapp.com/apidoc/index.html
 `allure serve ./reports`
 
 
-### How to Run via Jenkins?
-
 
