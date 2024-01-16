@@ -2,8 +2,8 @@
 
 def payload_create_booking():
     payload = {
-        "firstname": "Bruno",
-        "lastname": "Br",
+        "firstname": "Brook",
+        "lastname": "Dhruv",
         "totalprice": 111,
         "depositpaid": "True",
         "bookingdates": {
@@ -17,8 +17,8 @@ def payload_create_booking():
 
 def payload_updateAllData_booking():
     payload = {
-        "firstname": "abcd",
-        "lastname": "abcd",
+        "firstname": "Krish",
+        "lastname": "Rock",
         "totalprice": 200,
         "depositpaid": "False",
         "bookingdates": {
@@ -32,7 +32,7 @@ def payload_updateAllData_booking():
 
 def payload_updateRequestName():
     payload = {
-        "firstname": "Ramya",
+        "firstname": "Rocky",
     }
     return payload
 
